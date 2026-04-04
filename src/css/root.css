@@ -1,0 +1,59 @@
+/* -- fontes -- */
+/* inter */
+/* roboto */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* -- reset -- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* -- variaveis globais -- */
+:root {
+  /* -- background -- */
+  --bg-ink-black: #091016;
+  /* ink fundo */
+  --bg-white: #f0f4ef;
+  /* Branco */
+
+  /* -- Paleta de Cores -- */
+  --text-black: #08090a;
+  /* Texto principal */
+
+  --text-white: #f0f4ef;
+  /* Texto secundário */
+
+  --text-metal: #343a40;
+  /* Texto terciário */
+
+  /* -- itens -- */
+  --primary-pink: #fc6471;
+  /* Rosa Bubblegum */
+
+  --secondary-green: #98ce00;
+  /* Verde */
+
+  --border-glow: rgba(120, 111, 172, 0.1);
+  --hover-bg: #04080b;
+  --border-translucent: rgba(255, 255, 255, 0.5);
+
+  /* Configurações - Base */
+  --font-main: "Inter", "Roboto", Arial, sans-serif;
+  --max-width: 1400px;
+  --header-height: 90px;
+}
+
+/** -- body -- */
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-white);
+  color: var(--text-black);
+  overflow-x: hidden;
+}
+html {
+  overflow: hidden;
+}

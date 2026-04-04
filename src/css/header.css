@@ -1,0 +1,94 @@
+@import "./root.css";
+/* header */
+.navbar {
+  height: var(--header-height);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  background-color: var(--bg-white);
+  position: relative;
+  z-index: 100;
+}
+
+/* Marca */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand-square {
+  width: 18px;
+  height: 18px;
+  background-color: var(--primary-pink);
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-text h1 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-black);
+  letter-spacing: -0.5px;
+}
+
+.brand-role {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--text-grey);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--text-grey);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+a.links--contact {
+  background-color: var(--bg-ink-black);
+  padding: 16px;
+  border-radius: 8px;
+  color: var(--bg-white);
+}
+
+a.links--contact:hover {
+  background-color: var(--hover-bg);
+}
+
+.nav-links a:hover {
+  color: var(--primary-pink);
+}
+
+/* Responsividade do Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .brand-role,
+  .nav-links {
+    display: none;
+  }
+}

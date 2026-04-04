@@ -1,0 +1,282 @@
+@import "./root.css";
+
+/* -------------------------- */
+/* ------ Hero Section ------ */
+/* -------------------------- */
+.hero {
+    background-color: var(--bg-ink-black);
+    /* Fundo sólido bege */
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.hero__container {
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Marcação Direita - Esquerda */
+    padding: 0 5%;
+    gap: 50px;
+}
+
+/* --- Lado Esquerdo: Texto --- */
+.hero__text-content {
+    flex: 1;
+    /* Ocupa o espaço disponível */
+    max-width: 600px;
+}
+
+.hero__intro {
+    font-size: 1.1rem;
+    color: var(--text-white);
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* tracinho antes do nomen '-' */
+.hero__intro::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--primary-pink);
+}
+
+/* Título Principal  com Typewriter */
+.hero__title {
+    font-size: 4rem;
+    /* Tamanho grande */
+    font-weight: 800;
+    color: var(--text-white);
+    line-height: 1.1;
+    margin-bottom: 40px;
+    min-height: 1.2em;
+    /* Evita que o layout pule quando apagar tudo */
+    display: flex;
+    align-items: center;
+}
+
+/* O texto que é digitado */
+.typewriter-text {
+    color: var(--text-white);
+    /* Se quiser que o texto digitado seja AZUL, troque para: var(--primary-blue) */
+}
+
+/* O Cursor (Barra vertical) */
+.cursor {
+    display: inline-block;
+    background-color: var(--primary-pink);
+    width: 5px;
+    /* Espessura da barra */
+    height: 70px;
+    /* Altura da barra (ajuste conforme o tamanho da fonte) */
+    margin-left: 10px;
+    animation: blink 1s infinite;
+}
+
+/* Animação de piscar */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .cursor {
+        height: 40px;
+        /* Cursor menor no celular */
+    }
+}
+
+/******************************/
+
+/* Lista de Contatos */
+.hero__contact-list {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.hero__contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: var(--text-white);
+}
+
+.hero__contact-list li i {
+    color: var(--primary-pink);
+    font-size: 1.2rem;
+    width: 20px;
+    /* Alinha os ícones */
+    text-align: center;
+}
+
+/* Redes Sociais */
+.hero__socials {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* feat: Adciona toolipt para hero__socials a
+/* style: Remover hover por ícones */
+.hero__socials a {
+    position: relative;
+    background-color: var(--text-white);
+    color: var(--text-black);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+
+.tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    color: var(--bg-white);
+    padding: 5px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* --- Efeito de Hover --- */
+.hero__socials a:hover .tooltip {
+    top: -40px;
+    /* Sobe um pouco ao aparecer */
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.hero__socials a:hover .tooltip {
+    background: var(--primary-pink);
+}
+
+.hero__socials a:hover .tooltip::before {
+    background: var(--primary-pink);
+}
+
+.hero__socials a:hover {
+    color: var(--bg-white);
+    background-color: var(--primary-pink);
+}
+
+/* --- Lado Direito: Imagem --- */
+.hero__image-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    /* Empurra a imagem para a direita */
+    position: relative;
+}
+
+.image-wrapper {
+    width: 450px;
+    /* Imagem bem grande */
+    height: 450px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid rgba(255, 255, 255, 0.5);
+    /* Borda branca translúcida */
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
+    /* Segunda borda "glow" */
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+    .hero__title {
+        font-size: 4rem;
+        /* Diminui o texto em tablets */
+    }
+
+    .image-wrapper {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__container {
+        flex-direction: column-reverse;
+        /* Foto em cima, texto em baixo no celular */
+        text-align: center;
+        /* Centraliza tudo */
+        gap: 40px;
+    }
+
+    .hero__text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza itens flex */
+    }
+
+    .hero__intro {
+        justify-content: center;
+        /* Centraliza o "- Eu sou..." */
+    }
+
+    .hero__title {
+        font-size: 3.5rem;
+    }
+
+    .hero__contact-list li {
+        justify-content: center;
+    }
+
+    .hero__image-content {
+        justify-content: center;
+    }
+
+    .image-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+}
