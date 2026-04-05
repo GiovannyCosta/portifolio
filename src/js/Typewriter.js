@@ -1,7 +1,7 @@
 const textElement = document.querySelector(".typewriter-text");
 const cursorElement = document.querySelector(".cursor");
 
-const words = ["DESENVOLVEDOR", "BACKEND"]; // palavras
+const words = ["DESENVOLVEDOR", "FULLSTACK"]; // palavras
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

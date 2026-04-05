@@ -28,15 +28,27 @@
                 </div>
             </div>
 
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">Sobre Mim</a></li>
-                    <li><a href="#curriculo">Currículo</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a class="links--contact" href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="navbar__menu" id="navbar-menu">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">Sobre Mim</a></li>
+                        <li><a href="#curriculo">Currículo</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a class="links--contact" href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <!-- todo: dark mode/light mode -->
+                <!-- <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label> -->
+            </div>
         </header>
         <!-- end header -->
 
@@ -61,7 +73,7 @@
                             </li>
                             <li>
                                 <i class="fa-solid fa-location-dot"></i>
-                                <span>Mitu, Vaupes, Colombia</span>
+                                <span>Manaus, Brasil</span>
                             </li>
                         </ul>
 
@@ -102,6 +114,7 @@
     <!-- end container -->
 
     <script src="./src/js/Typewriter.js"></script>
+    <script src="./src/js/activeMenu.js"></script>
 </body>
 
 </html>
