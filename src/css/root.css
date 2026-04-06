@@ -14,29 +14,30 @@
 
 /* -- variaveis globais -- */
 :root {
-  /* -- background -- */
+  /* -- backgrounds gerais -- */
   --bg-ink-black: #091016;
-  /* ink fundo */
   --bg-white: #f0f4ef;
-  /* Branco */
 
-  /* -- Paleta de Cores -- */
+  /* -- backgrounds especificos -- */
+  --bg-navbar: #f0f4ef; /* O Nav começa escuro */
+  --bg-socials: #f0f4ef; /* O fundo dos ícones sociais (começa claro) */
+  --bg-contact-btn: #091016; /* Fundo do botão contato no Nav */
+  --hover-bg-hero: 10px solid rgba(255, 255, 255, 0.5);
+  --box-bg-hero: 0 0 0 10px rgba(255, 255, 255, 0.2);
+
+  /* -- Paleta de Cores (Textos) -- */
   --text-black: #08090a;
-  /* Texto principal */
-
   --text-white: #f0f4ef;
-  /* Texto secundário */
-
   --text-metal: #343a40;
-  /* Texto terciário */
+
+  /* -- Textos especificos -- */
+  --text-navbar: #080808; /* Texto do nav (começa claro) */
+  --text-socials: #08090a; /* O ícone social (começa escuro) */
+  --text-contact-btn: #f0f4ef; /* Texto do botão contato no Nav */
 
   /* -- itens -- */
   --primary-pink: #fc6471;
-  /* Rosa Bubblegum */
-
   --secondary-green: #98ce00;
-  /* Verde */
-
   --border-glow: rgba(120, 111, 172, 0.1);
   --hover-bg: #04080b;
   --border-translucent: rgba(255, 255, 255, 0.5);
@@ -62,4 +63,29 @@ html {
   html {
     overflow: auto;
   }
+}
+
+body.white-mode {
+  /* No modo claro, invertemos os fundos gerais */
+  --bg-ink-black: #ffffff;
+  --bg-white: #e9ecef; /* Um cinza bem clarinho para dar contraste com o hero branco */
+  --hover-bg-hero: 10px solid rgba(0, 0, 0, 0.05);
+  --box-bg-hero: 0 0 0 10px rgba(66, 65, 65, 0.158);
+
+  /* Invertemos os textos gerais */
+  --text-white: #08090a;
+
+  /* AQUI É O SEGREDO: Definimos as cores exatas que a Nav e os Sociais devem ter no modo claro */
+  --bg-navbar: #091016; /* Mantém o nav escuro! */
+  --text-navbar: #f0f4ef; /* Mantém o texto do nav claro! */
+
+  --bg-contact-btn: #fc6471; /* Exemplo: Botão contato rosa no modo claro */
+  --text-contact-btn: #ffffff; /* Texto do botão branco */
+
+  /* Ícones sociais brancos no modo claro */
+  --bg-socials: #08090a; /* Fundo do botão social escuro */
+  --text-socials: #ffffff; /* Ícone da rede social branco */
+
+  --hover-bg: #e2e2e2;
+  --border-translucent: rgba(0, 0, 0, 0.1);
 }

@@ -137,8 +137,8 @@
 
 .hero__socials a {
   position: relative;
-  background-color: var(--text-white);
-  color: var(--text-black);
+  background-color: var(--bg-socials);
+  color: var(--text-socials);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -210,9 +210,9 @@
   height: 450px;
   border-radius: 50%;
   overflow: hidden;
-  border: 10px solid rgba(255, 255, 255, 0.5);
+  border: var(--hover-bg-hero);
   /* Borda branca translúcida */
-  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
+  box-shadow: var(--box-bg-hero);
   /* Segunda borda "glow" */
 }
 
