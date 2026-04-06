@@ -115,7 +115,7 @@ a.links--contact:hover {
     left: -100%;
     width: 100%;
     height: calc(100vh - var(--header-height));
-    background-color: var(--bg-white);
+    background-color: var(--bg-navbar);
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 50px;
@@ -136,5 +136,9 @@ a.links--contact:hover {
 
   .nav-links a {
     font-size: 1.2rem;
+    color: var(--text-navbar);
+  }
+  .nav-links .links--contact{
+    color:var(--text-contact-btn);
   }
 }
