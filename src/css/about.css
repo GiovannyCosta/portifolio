@@ -1,85 +1,147 @@
-@import url("./root.css");
-
-/* About */
-.about__hero-container {
-  justify-content: center;
-}
-
-.about__hero-text {
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Título Centralizado */
-.title-about {
+/* ── about.css ────────────────────────────────────────────── */
+#about {
+  background: var(--bg-ink-black);
   color: var(--text-white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 30px;
 }
 
-/* tracinho rosa embaixo do título */
-.title-about::after {
-  margin: 10px auto 0 auto;
+#about .sec-label {
+  color: rgba(240, 244, 239, 0.4);
 }
 
-.about__bio {
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-.about__bio p {
+#about .sec-title {
   color: var(--text-white);
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
-/* Cards */
-.about__highlights {
-  display: flex;
-  flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
-  justify-content: center;
-  gap: 25px;
-  width: 100%;
-  list-style: none;
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
-  margin-top: 20px;
+#about .sec-title em {
+  color: rgba(240, 244, 239, 0.45);
 }
 
-.about__highlights li.highlight-card {
-  /* Cresce para ocupar espaço, mas tem um tamanho mínimo */
-  flex: 1 1 calc(33.333% - 25px);
-  min-width: 250px;
-  background-color: var(--bg-white);
-  padding: 30px 20px;
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-p {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(240, 244, 239, 0.7);
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
+}
+
+.about-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 40px;
+  background: rgba(152, 206, 0, 0.1);
+  border: 1px solid rgba(152, 206, 0, 0.25);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #b8e850;
+  margin-top: 0.25rem;
+}
+
+.about-badge::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--secondary-green);
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.25rem;
+}
+
+.stat-card {
+  padding: 1.25rem;
+  border: 1px solid rgba(240, 244, 239, 0.07);
   border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  border-bottom: 4px solid var(--primary-pink); /* Detalhe colorido na base */
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  background: rgba(240, 244, 239, 0.02);
 }
 
-.about__highlights li span {
-  font-size: 2rem;
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--primary-pink);
+  line-height: 1;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .about__highlights {
-    flex-direction: column;
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: rgba(240, 244, 239, 0.35);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+
+.about-code-block {
+  background: rgba(240, 244, 239, 0.03);
+  border: 1px solid rgba(240, 244, 239, 0.07);
+  border-radius: 16px;
+  padding: 2.5rem;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 2.2;
+  color: rgba(240, 244, 239, 0.55);
+}
+
+.about-code-block .kw {
+  color: #c084fc;
+}
+
+.about-code-block .str {
+  color: var(--secondary-green);
+}
+
+.about-code-block .prop {
+  color: var(--primary-pink);
+}
+
+.about-code-block .cmt {
+  color: rgba(240, 244, 239, 0.22);
+  font-style: italic;
+}
+
+.ci2 {
+  padding-left: 3rem;
+  display: block;
+}
+
+.prop-green {
+  color: var(--secondary-green);
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 50px;
+  height: 13px;
+  background: var(--primary-pink);
+  animation: blink 1s infinite;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
   }
 }

@@ -1,0 +1,61 @@
+/* ── footer.css ───────────────────────────────────────────── */
+footer {
+  background: var(--bg-ink-black);
+  border-top: 1px solid rgba(240, 244, 239, 0.05);
+  padding: 2rem;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(240, 244, 239, 0.25);
+  letter-spacing: 0.04em;
+}
+
+.footer-by {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(240, 244, 239, 0.35);
+}
+
+.footer-by a {
+  color: var(--primary-pink);
+  text-decoration: none;
+}
+
+.footer-by a:hover {
+  color: var(--secondary-green);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.fsocial {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(240, 244, 239, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(240, 244, 239, 0.4);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.fsocial:hover {
+  border-color: var(--primary-pink);
+  color: var(--primary-pink);
+}

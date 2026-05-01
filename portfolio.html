@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <title>Portfólio Dev | Giovanny Costa</title>
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div><span class="loader-dot"></span><span class="loader-dot"></span><span class="loader-dot"></span></div>
+      <p class="loader-label" id="loader-text">carregando portfólio</p>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <nav>
+      <a href="#home" class="nav-logo"><span>//</span>Gio.Env</a>
+      <ul class="nav-links" id="desktopNav">
+        <li><a href="#home" class="active" data-key="nav_home">Início</a></li>
+        <li><a href="#about" data-key="nav_about">Sobre</a></li>
+        <li><a href="#skills" data-key="nav_skills">Habilidades</a></li>
+        <li><a href="#projects" data-key="nav_projects">Projetos</a></li>
+        <li><a href="#contact" data-key="nav_contact">Contato</a></li>
+      </ul>
+      <div class="nav-controls">
+        <!-- Botão único: clique para ciclar PT → EN → ES → PT -->
+        <button class="lang-toggle" id="langToggle" title="Trocar idioma">PT</button>
+        <a href="#contact" class="nav-cta" data-key="nav_hire">Me contrate</a>
+        <button class="menu-btn" id="menuBtn"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#home" data-key="nav_home">Início</a>
+    <a href="#about" data-key="nav_about">Sobre</a>
+    <a href="#skills" data-key="nav_skills">Habilidades</a>
+    <a href="#projects" data-key="nav_projects">Projetos</a>
+    <a href="#contact" data-key="nav_contact">Contato</a>
+    <div class="mobile-lang">
+      <!-- Mesmo botão no mobile -->
+      <button class="lang-toggle" id="langToggleMobile" title="Trocar idioma">PT</button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home">
+      <div class="hero-inner">
+        <div>
+          <p class="hero-label" data-key="hero_hi">Olá, eu sou</p>
+          <h1 class="hero-name"><span class="pk">const</span> = Developer<span>;</span></h1>
+          <p class="hero-role">// <b data-key="hero_role">Estudante de ADS &amp; Desenvolvedor Web</b></p>
+          <p class="hero-desc" data-key="hero_desc">Desenvolvendo uma base sólida em engenharia de software com paixão
+            genuína por código limpo e experiências digitais significativas.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-dark" data-key="hero_cta1">Entre em contato →</a>
+            <a href="#projects" class="btn btn-outline" data-key="hero_cta2">Ver projetos</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/GiovannyCosta" class="social-pill" title="GitHub" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/gioenv/" class="social-pill" title="LinkedIn" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="javascript:void(0)" class="social-pill" id="copyEmail" title="Clique para copiar e-mail">
+              <p id="tolipCopied">E-mail copiado!</p>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-frame">
+            <div class="hcode">
+              <span><span class="kw">const</span> dev = {</span>
+              <span class="ci">name: <span class="str">'Developer'</span>,</span>
+              <span class="ci">stack: [<span class="str">'JS'</span>, <span class="str">'Java'</span>],</span>
+              <span class="ci">curso: <span class="str">'ADS'</span>,</span>
+              <span class="ci">ano: <span class="num">1</span>,</span>
+              <span class="ci">paixao: <span class="str">'Coding'</span></span>
+              <span>};<span class="cursor-blink"></span></span>
+            </div>
+            <div class="badge-float badge-float--pink"><span class="dot"></span>JavaScript · Node.js</div>
+            <div class="badge-float badge-float--green"><span class="dot"></span>Java · Portugol · C</div>
+            <div class="badge-float badge-float--purple"><span class="dot"></span>HTML · CSS · Git</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <p class="sec-label reveal" data-key="about_label">Sobre mim</p>
+        <h2 class="sec-title reveal" data-key="about_title">Apaixonado por <em>tecnologia</em><br>e código limpo</h2>
+        <div class="about-grid">
+          <div class="reveal-l">
+            <p class="about-p" data-key="about_p1">Atualmente cursando Análise e Desenvolvimento de Sistemas, dedico-me
+              a construir uma base sólida em engenharia de software e na resolução criativa de problemas. Minha
+              trajetória sempre foi guiada por uma curiosidade genuína pelo universo da tecnologia.</p>
+            <p class="about-p" data-key="about_p2">O primeiro contato com HTML e CSS abriu meus olhos para um mundo
+              vasto e fascinante. Contudo, foi ao descobrir o JavaScript e escrever o meu primeiro "Hello World" que
+              senti o desejo definitivo de transformar essa paixão em profissão, o que me motivou a ingressar na
+              faculdade.</p>
+            <p class="about-p" data-key="about_p3">Desde o início da minha formação acadêmica, venho trilhando uma
+              jornada de aprendizado contínuo. Comecei aprimorando minha lógica de programação com Portugol e C,
+              evoluindo para o desenvolvimento de aplicações práticas com Java e JavaScript — incluindo a criação de
+              pequenos jogos web.</p>
+            <span class="about-badge" data-key="about_badge">1 ano de curso · Em andamento</span>
+            <div class="about-stats">
+              <div class="stat-card">
+                <div class="stat-num" data-count="1">0</div>
+                <div class="stat-label" data-key="stat1">Ano de curso</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num" data-count="3">0</div>
+                <div class="stat-label" data-key="stat2">Linguagens</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num" data-count="5">0</div>
+                <div class="stat-label" data-key="stat3">Projetos pessoais</div>
+              </div>
+            </div>
+          </div>
+          <div class="about-code-block reveal-r">
+            <span><span class="kw">const</span> dev = {</span>
+            <span class="ci"><span class="prop">nome</span>: <span class="str">'Developer'</span>,</span>
+            <span class="ci"><span class="prop">curso</span>: <span class="str">'ADS'</span>,</span>
+            <span class="ci"><span class="prop">stack</span>: [</span>
+            <span class="ci2"><span class="str">'JavaScript'</span>, <span class="str">'Java'</span>,</span>
+            <span class="ci2"><span class="str">'HTML'</span>, <span class="str">'CSS'</span>, <span
+                class="str">'C'</span></span>
+            <span class="ci">],</span>
+            <span class="ci"><span class="prop">paixao</span>: <span class="str">'Código limpo'</span>,</span>
+            <span class="ci"><span class="prop">disponivel</span>: <span class="kw prop-green">true</span></span>
+            <span>};</span>
+            <span>&nbsp;</span>
+            <span class="cmt">// Aprendendo todos os dias 🚀</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <p class="sec-label reveal" data-key="skills_label">Expertise</p>
+        <h2 class="sec-title reveal" data-key="skills_title">Tecnologias que <em>domino</em></h2>
+        <div class="skills-cats">
+          <div class="skill-cat reveal">
+            <div class="cat-title" data-key="sk_fe">Frontend</div>
+            <div class="skill-item" data-pct="80">
+              <div class="skill-row"><span class="skill-name">HTML &amp; CSS</span><span class="skill-pct">0%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-pct="70">
+              <div class="skill-row"><span class="skill-name">JavaScript</span><span class="skill-pct">0%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-pct="45">
+              <div class="skill-row"><span class="skill-name" data-key="sk_learning_react">React
+                  (aprendendo)</span><span class="skill-pct">0%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-cat reveal">
+            <div class="cat-title" data-key="sk_be">Backend &amp; Lógica</div>
+            <div class="skill-item" data-pct="75">
+              <div class="skill-row"><span class="skill-name">Java</span><span class="skill-pct">0%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-pct="70">
+              <div class="skill-row"><span class="skill-name">Portugol / C</span><span class="skill-pct">0%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-pct="50">
+              <div class="skill-row"><span class="skill-name" data-key="sk_learning_node">Node.js
+                  (aprendendo)</span><span class="skill-pct">0%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-cat reveal">
+            <div class="cat-title" data-key="sk_tools">Ferramentas</div>
+            <div class="skill-item" data-pct="72">
+              <div class="skill-row"><span class="skill-name">Git &amp; GitHub</span><span class="skill-pct">0%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-pct="65">
+              <div class="skill-row"><span class="skill-name">VS Code</span><span class="skill-pct">0%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-pct="45">
+              <div class="skill-row"><span class="skill-name" data-key="sk_figma">Figma (básico)</span><span
+                  class="skill-pct">0%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <p class="sec-label reveal" data-key="proj_label">Trabalhos</p>
+        <h2 class="sec-title reveal" data-key="proj_title"><em>Projetos</em> em destaque</h2>
+        <div class="proj-grid">
+          <div class="proj-card reveal">
+            <div class="proj-thumb"><span class="proj-icon">🎮</span>
+              <div class="proj-overlay">
+                <a href="https://github.com/stars/GiovannyCosta/lists/jogos" class="proj-link"><svg width="14"
+                    height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg></a>
+                <a href="https://github.com/stars/GiovannyCosta/lists/jogos" class="proj-link"><svg width="14"
+                    height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg></a>
+              </div>
+            </div>
+            <div class="proj-body">
+              <h3 class="proj-title" data-key="p1_title">Jogo Web com JavaScript</h3>
+              <p class="proj-desc" data-key="p1_desc">Pequeno jogo interativo criado como projeto pessoal para
+                consolidar conhecimentos de lógica de programação, DOM e eventos.</p>
+              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                  class="tag">JavaScript</span></div>
+            </div>
+          </div>
+          <div class="proj-card reveal proj-card--d1">
+            <div class="proj-thumb"><span class="proj-icon">☕</span>
+              <div class="proj-overlay">
+                <a href="#" class="proj-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg></a>
+                <a href="#" class="proj-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg></a>
+              </div>
+            </div>
+            <div class="proj-body">
+              <h3 class="proj-title" data-key="p2_title">Aplicação Java — POO</h3>
+              <p class="proj-desc" data-key="p2_desc">Projeto acadêmico desenvolvido em Java aplicando conceitos de
+                Programação Orientada a Objetos: herança, polimorfismo e encapsulamento.</p>
+              <div class="tags"><span class="tag">Java</span><span class="tag">POO</span></div>
+            </div>
+          </div>
+          <div class="proj-card reveal proj-card--d2">
+            <div class="proj-thumb"><span class="proj-icon">🌐</span>
+              <div class="proj-overlay">
+                <a href="#" class="proj-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg></a>
+                <a href="#" class="proj-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg></a>
+              </div>
+            </div>
+            <div class="proj-body">
+              <h3 class="proj-title" data-key="p3_title">Portfólio Pessoal</h3>
+              <p class="proj-desc" data-key="p3_desc">Este portfólio — totalmente responsivo, trilíngue e com animações
+                CSS, construído com HTML, CSS e JavaScript puro.</p>
+              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                  class="tag">JavaScript</span><span class="tag">i18n</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <p class="sec-label reveal" data-key="ct_label">Contato</p>
+        <h2 class="sec-title reveal" data-key="ct_title">Vamos trabalhar <em>juntos</em></h2>
+        <div class="contact-grid">
+          <div class="contact-items reveal-l">
+            <div class="contact-item">
+              <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="rgba(240,244,239,.7)" stroke-width="1.5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg></div>
+              <div>
+                <div class="clabel" data-key="ct_email">Email</div><a href="mailto:dev@example.com"
+                  class="cval">gioreizon@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(240,244,239,.55)">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg></div>
+              <div>
+                <div class="clabel">LinkedIn</div><a href="https://www.linkedin.com/in/gioenv/" class="cval"
+                  target="_blank" rel="noopener">/in/gioenv</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="rgba(240,244,239,.7)" stroke-width="1.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg></div>
+              <div>
+                <div class="clabel" data-key="ct_loc">Localização</div><span class="cval"
+                  data-key="ct_loc_val">Brasil</span>
+              </div>
+            </div>
+          </div>
+          <form class="cform reveal-r" id="contactForm">
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" data-key="f_name">Nome</label>
+                <input type="text" class="form-input" data-ph="f_name_ph" placeholder="Seu nome" required>
+              </div>
+              <div class="form-field">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" placeholder="seu@email.com" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label class="form-label" data-key="f_subj">Assunto</label>
+              <input type="text" class="form-input" data-ph="f_subj_ph" placeholder="Sobre o que deseja falar?"
+                required>
+            </div>
+            <div class="form-field">
+              <label class="form-label" data-key="f_msg">Mensagem</label>
+              <textarea class="form-input" data-ph="f_msg_ph" placeholder="Conte-me sobre seu projeto..." rows="5"
+                required></textarea>
+            </div>
+            <button type="submit" class="btn-send">
+              <span data-key="f_send">Enviar mensagem</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Arghata · <span data-key="ft_built">Feito com ❤️ e código</span></p>
+      <p class="footer-by"><span data-key="ft_by">por</span> <a href="https://www.linkedin.com/in/gioenv/"
+          target="_blank" rel="noopener">Gio.Env</a></p>
+      <div class="footer-socials">
+        <a href="https://github.com/gioenv" class="fsocial"><svg width="13" height="13" viewBox="0 0 24 24"
+            fill="currentColor">
+            <path
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+          </svg></a>
+        <a href="https://github.com/gioenv" class="fsocial" target="_blank" rel="noopener"><svg width="13" height="13"
+            viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg></a>
+
+        <a href="https://www.instagram.com/gio.env/" class="fsocial" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/js/translation.js"></script>
+  <script src="./src/js/scroll.js"></script>
+  <script src="./src/js/main.js"></script>
+  <script src="./src/js/copyText.js"></script>
+</body>
+
+</html>

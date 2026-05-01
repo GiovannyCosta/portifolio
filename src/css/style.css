@@ -1,0 +1,22 @@
+/* <!--
+  ============================================================
+  ESTRUTURA MODULAR — pronto para separar em arquivos:
+  
+  css/
+    responsive.css  → @media queries
+
+  
+
+  --> */
+@import url("/src/css/root.css");
+@import url("/src/css/loader.css");
+@import url("/src/css/header.css");
+@import url("/src/css/nav.css");
+@import url("/src/css/hero.css");
+@import url("/src/css/about.css");
+@import url("/src/css/skills.css");
+@import url("/src/css/projects.css");
+@import url("/src/css/contact.css");
+@import url("/src/css/footer.css");
+@import url("/src/css/animations.css");
+@import url("/src/css/responsive.css");

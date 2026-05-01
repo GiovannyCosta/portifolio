@@ -1,0 +1,123 @@
+/* ── projects.css ─────────────────────────────────────────── */
+#projects {
+  background: rgba(8, 9, 10, 0.02);
+  border-top: 1px solid rgba(8, 9, 10, 0.05);
+}
+
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 1.5rem;
+}
+
+.proj-card {
+  border: 1px solid rgba(8, 9, 10, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition:
+    border-color 0.2s,
+    transform 0.25s,
+    box-shadow 0.25s;
+  background: var(--bg-white);
+}
+
+.proj-card:hover {
+  border-color: rgba(252, 100, 113, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(8, 9, 10, 0.08);
+}
+
+.proj-thumb {
+  height: 180px;
+  background: rgba(8, 9, 10, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(8, 9, 10, 0.06);
+}
+
+.proj-icon {
+  font-size: 2.8rem;
+  opacity: 0.14;
+}
+
+.proj-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 9, 10, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.proj-card:hover .proj-overlay {
+  opacity: 1;
+}
+
+.proj-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-black);
+  transition: background 0.2s;
+}
+
+.proj-link:hover {
+  background: var(--primary-pink);
+  color: #fff;
+}
+
+.proj-body {
+  padding: 1.5rem;
+}
+
+.proj-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: var(--text-black);
+}
+
+.proj-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-metal);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Delay classes for proj cards — replaces inline style="transition-delay" */
+.proj-card--d1 {
+  transition-delay: 0.1s;
+}
+
+.proj-card--d2 {
+  transition-delay: 0.2s;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(8, 9, 10, 0.04);
+  border: 1px solid rgba(8, 9, 10, 0.08);
+  color: var(--text-metal);
+}

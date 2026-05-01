@@ -1,0 +1,52 @@
+/* ── nav.css (lang-btn + mobile) ─────────────────────────── */
+.lang-toggle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 5px 13px;
+  border-radius: 40px;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  border: 1.5px solid rgba(8, 9, 10, 0.15);
+  background: transparent;
+  color: var(--text-metal);
+  transition: all 0.2s;
+  min-width: 42px;
+  text-align: center;
+}
+
+.lang-toggle:hover {
+  border-color: var(--primary-pink);
+  color: var(--primary-pink);
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  background: var(--bg-white);
+  border-bottom: 1px solid rgba(8, 9, 10, 0.08);
+  padding: 1.5rem 2rem 2rem;
+  z-index: 99;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+.mobile-nav a {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-black);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(8, 9, 10, 0.06);
+}
+
+.mobile-lang {
+  padding: 0.75rem 0 0;
+}

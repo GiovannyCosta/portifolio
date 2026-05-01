@@ -1,0 +1,105 @@
+/* ── skills.css ───────────────────────────────────────────── */
+#skills {
+  background: var(--bg-white);
+}
+
+.skills-cats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.skill-cat {
+  border: 1px solid rgba(8, 9, 10, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  transition:
+    border-color 0.2s,
+    transform 0.25s;
+}
+
+.skill-cat:hover {
+  border-color: rgba(252, 100, 113, 0.3);
+  transform: translateY(-4px);
+}
+
+.cat-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-metal);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cat-title::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.skill-cat:nth-child(1) .cat-title::before {
+  background: var(--primary-pink);
+}
+
+.skill-cat:nth-child(2) .cat-title::before {
+  background: var(--secondary-green);
+}
+
+.skill-cat:nth-child(3) .cat-title::before {
+  background: #7c6af7;
+}
+
+.skill-item {
+  margin-bottom: 1.25rem;
+}
+
+.skill-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.skill-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-black);
+}
+
+.skill-pct {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-metal);
+}
+
+.skill-track {
+  height: 3px;
+  background: rgba(8, 9, 10, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  border-radius: 2px;
+  width: 0;
+  transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-cat:nth-child(1) .skill-fill {
+  background: var(--primary-pink);
+}
+
+.skill-cat:nth-child(2) .skill-fill {
+  background: var(--secondary-green);
+}
+
+.skill-cat:nth-child(3) .skill-fill {
+  background: #7c6af7;
+}

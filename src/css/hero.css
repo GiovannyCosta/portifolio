@@ -1,275 +1,286 @@
-@import "./root.css";
-
-.hero {
-  background-color: var(--bg-ink-black);
-  /* Fundo sólido bege */
+/* ── hero.css ─────────────────────────────────────────────── */
+#home {
   min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 50px 0;
-  overflow: hidden;
+  padding: 3rem 2rem;
 }
 
-.hero__container {
-  width: 100%;
+.hero-inner {
   max-width: var(--max-width);
-  display: flex;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
   align-items: center;
-  justify-content: space-between;
-  /* Marcação Direita - Esquerda */
-  padding: 0 5%;
-  gap: 50px;
+  width: 100%;
 }
 
-/* --- Lado Esquerdo: Texto --- */
-.hero__text-content {
-  flex: 1;
-  /* Ocupa o espaço disponível */
-  max-width: 600px;
+.hero-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--text-metal);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.3s forwards;
 }
 
-.hero__intro {
-  font-size: 1.1rem;
-  color: var(--text-white);
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  font-weight: 400;
+  color: var(--text-black);
+  line-height: 1.08;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.5s forwards;
+}
+
+.hero-name .pk {
+  color: var(--primary-pink);
+}
+
+.hero-role {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  color: var(--text-metal);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.7s forwards;
+}
+
+.hero-role b {
+  color: var(--secondary-green);
   font-weight: 500;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
-/* tracinho antes do nomen '-' */
-.hero__intro::before {
+.hero-desc {
+  font-size: 15px;
+  color: var(--text-metal);
+  max-width: 440px;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.9s forwards;
+  font-weight: 300;
+  line-height: 1.85;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.7s 1.1s forwards;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s;
+  border: 1.5px solid transparent;
+  letter-spacing: 0.02em;
+  font-family: var(--font-main);
+}
+
+.btn-dark {
+  background: var(--bg-ink-black);
+  color: var(--text-white);
+  border-color: var(--bg-ink-black);
+}
+
+.btn-dark:hover {
+  background: var(--primary-pink);
+  border-color: var(--primary-pink);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-black);
+  border-color: var(--text-black);
+}
+
+.btn-outline:hover {
+  background: var(--text-black);
+  color: var(--bg-white);
+  transform: translateY(-2px);
+}
+
+.hero-socials {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s 1.3s forwards;
+}
+
+.social-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(8, 9, 10, 0.15);
+  color: var(--text-black);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.social-pill:hover {
+  border-color: var(--primary-pink);
+  color: var(--primary-pink);
+  transform: translateY(-3px);
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s 0.6s forwards;
+}
+
+.hero-frame {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(8, 9, 10, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, rgba(252, 100, 113, 0.05), rgba(152, 206, 0, 0.04));
+}
+
+.hero-frame::before {
   content: "";
-  display: block;
-  width: 20px;
-  height: 2px;
-  background-color: var(--primary-pink);
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  border: 1px dashed rgba(8, 9, 10, 0.08);
 }
 
-/* Título Principal  com Typewriter */
-.hero__title {
-  font-size: 4rem;
-  /* Tamanho grande */
-  font-weight: 800;
-  color: var(--text-white);
-  line-height: 1.1;
-  margin-bottom: 40px;
-  min-height: 1.2em;
-  /* Evita que o layout pule quando apagar tudo */
+.hcode {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-metal);
+  text-align: left;
+  line-height: 2.1;
+  padding: 1.5rem;
+}
+
+.hcode .kw {
+  color: var(--primary-pink);
+}
+
+.hcode .str {
+  color: var(--secondary-green);
+}
+
+.hcode .num {
+  color: #7c6af7;
+}
+
+.ci {
+  padding-left: 1.2rem;
+  display: block;
+}
+
+.badge-float {
+  position: absolute;
+  background: var(--bg-white);
+  border: 1.5px solid rgba(8, 9, 10, 0.1);
+  border-radius: 12px;
+  padding: 0.5rem 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--text-black);
   display: flex;
   align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 20px rgba(8, 9, 10, 0.06);
 }
 
-/* O texto que é digitado */
-.typewriter-text {
-  color: var(--text-white);
+.badge-float .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
-/* O Cursor (Barra vertical) */
-.cursor {
-  display: inline-block;
-  background-color: var(--primary-pink);
-  width: 5px;
-  /* Espessura da barra */
-  height: 70px;
-  /* Altura da barra (ajuste conforme o tamanho da fonte) */
-  margin-left: 10px;
-  animation: blink 1s infinite;
+.badge-float--pink .dot {
+  background: var(--primary-pink);
 }
 
-/* Animação de piscar */
-@keyframes blink {
+.badge-float--green .dot {
+  background: var(--secondary-green);
+}
+
+.badge-float--purple .dot {
+  background: #7c6af7;
+}
+
+.badge-float:nth-child(2) {
+  top: 8%;
+  right: -18px;
+  animation: fbadge 4s ease-in-out infinite;
+}
+
+.badge-float:nth-child(3) {
+  bottom: 12%;
+  left: -28px;
+  animation: fbadge 4s 1.5s ease-in-out infinite;
+}
+
+.badge-float:nth-child(4) {
+  top: 48%;
+  right: -32px;
+  animation: fbadge 4s 3s ease-in-out infinite;
+}
+
+#tolipCopied {
+  position: absolute;
+  bottom: 130%; /* Ajuste a altura conforme desejar */
+  left: 50%; /* Move o início do texto para o meio do botão */
+  transform: translateX(-50%) translateY(10px); /* Centraliza o elemento e desce um pouco */
+
+  background: #333;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* Quando clicado */
+.social-pill.copied #tolipCopied {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Mantém centralizado ao subir */
+}
+
+@keyframes fbadge {
   0%,
   100% {
-    opacity: 1;
+    transform: translateY(0);
   }
 
   50% {
-    opacity: 0;
-  }
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .hero__title {
-    font-size: 3rem;
-  }
-
-  .cursor {
-    height: 40px;
-    /* Cursor menor no celular */
-  }
-}
-
-/******************************/
-
-/* Lista de Contatos */
-.hero__contact-list {
-  list-style: none;
-  margin-bottom: 40px;
-}
-
-.hero__contact-list li {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 15px;
-  font-size: 1rem;
-  color: var(--text-white);
-}
-
-.hero__contact-list li i {
-  color: var(--primary-pink);
-  font-size: 1.2rem;
-  width: 20px;
-  /* Alinha os ícones */
-  text-align: center;
-}
-
-/* Redes Sociais */
-.hero__socials {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.hero__socials a {
-  position: relative;
-  background-color: var(--bg-socials);
-  color: var(--text-socials);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  margin-top: 16px;
-}
-
-.tooltip {
-  position: absolute;
-  top: 0;
-  font-size: 14px;
-  color: var(--bg-white);
-  padding: 5px 8px;
-  border-radius: 5px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.tooltip::before {
-  position: absolute;
-  content: "";
-  height: 8px;
-  width: 8px;
-  bottom: -3px;
-  left: 50%;
-  transform: translate(-50%) rotate(45deg);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-/* --- Efeito de Hover --- */
-.hero__socials a:hover .tooltip {
-  top: -40px;
-  /* Sobe um pouco ao aparecer */
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.hero__socials a:hover .tooltip {
-  background: var(--primary-pink);
-}
-
-.hero__socials a:hover .tooltip::before {
-  background: var(--primary-pink);
-}
-
-.hero__socials a:hover {
-  color: var(--bg-white);
-  background-color: var(--primary-pink);
-}
-
-/* --- Lado Direito: Imagem --- */
-.hero__image-content {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  /* Empurra a imagem para a direita */
-  position: relative;
-}
-
-.image-wrapper {
-  width: 450px;
-  /* Imagem bem grande */
-  height: 450px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: var(--hover-bg-hero);
-  /* Borda branca translúcida */
-  box-shadow: var(--box-bg-hero);
-  /* Segunda borda "glow" */
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* --- Responsividade --- */
-@media (max-width: 992px) {
-  .hero__title {
-    font-size: 4rem;
-    /* Diminui o texto em tablets */
-  }
-
-  .image-wrapper {
-    width: 350px;
-    height: 350px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero__container {
-    flex-direction: column-reverse;
-    /* Foto em cima, texto em baixo no celular */
-    text-align: center;
-    /* Centraliza tudo */
-    gap: 40px;
-  }
-
-  .hero__text-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Centraliza itens flex */
-  }
-
-  .hero__intro {
-    justify-content: center;
-    /* Centraliza o "- Eu sou..." */
-  }
-
-  .hero__title {
-    font-size: 2.1rem;
-  }
-
-  .hero__contact-list li {
-    justify-content: left;
-  }
-
-  .hero__image-content {
-    justify-content: center;
-  }
-
-  .image-wrapper {
-    width: 280px;
-    height: 280px;
+    transform: translateY(-8px);
   }
 }

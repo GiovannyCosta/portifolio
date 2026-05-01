@@ -1,91 +1,75 @@
-/* -- fontes -- */
-/* inter */
-/* roboto */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
-/* -- reset -- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style-type: none;
-}
-
-/* -- variaveis globais -- */
+/* ── root.css ─────────────────────────────────────────────── */
 :root {
-  /* -- backgrounds gerais -- */
   --bg-ink-black: #091016;
   --bg-white: #f0f4ef;
-
-  /* -- backgrounds especificos -- */
-  --bg-navbar: #f0f4ef; /* O Nav começa escuro */
-  --bg-socials: #f0f4ef; /* O fundo dos ícones sociais (começa claro) */
-  --bg-contact-btn: #091016; /* Fundo do botão contato no Nav */
-  --hover-bg-hero: 10px solid rgba(255, 255, 255, 0.5);
-  --box-bg-hero: 0 0 0 10px rgba(255, 255, 255, 0.2);
-
-  /* -- Paleta de Cores (Textos) -- */
   --text-black: #08090a;
   --text-white: #f0f4ef;
   --text-metal: #343a40;
-
-  /* -- Textos especificos -- */
-  --text-navbar: #080808; /* Texto do nav (começa claro) */
-  --text-socials: #08090a; /* O ícone social (começa escuro) */
-  --text-contact-btn: #f0f4ef; /* Texto do botão contato no Nav */
-
-  /* -- itens -- */
   --primary-pink: #fc6471;
   --secondary-green: #98ce00;
-  --border-glow: rgba(120, 111, 172, 0.1);
-  --hover-bg: #04080b;
-  --border-translucent: rgba(255, 255, 255, 0.5);
-
-  /* Configurações - Base */
-  --font-main: "Inter", "Roboto", Arial, sans-serif;
-  --max-width: 1400px;
-  --header-height: 90px;
+  --font-main: "DM Sans", Arial, sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-display: "Playfair Display", serif;
+  --max-width: 1200px;
+  --header-height: 72px;
 }
 
-/** -- body -- */
+/* ── base ─────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 body {
   font-family: var(--font-main);
-  background-color: var(--bg-white);
+  background: var(--bg-white);
   color: var(--text-black);
+  line-height: 1.6;
   overflow-x: hidden;
 }
-html {
-  overflow: hidden;
+
+/* ── sections base ────────────────────────────────────────── */
+main {
+  margin-top: var(--header-height);
 }
 
-@media (max-width: 768px) {
-  html {
-    overflow: auto;
-  }
+section {
+  padding: 5rem 2rem;
 }
 
-body.white-mode {
-  /* No modo claro, invertemos os fundos gerais */
-  --bg-ink-black: #ffffff;
-  --bg-white: #e9ecef; /* Um cinza bem clarinho para dar contraste com o hero branco */
-  --hover-bg-hero: 10px solid rgba(0, 0, 0, 0.05);
-  --box-bg-hero: 0 0 0 10px rgba(66, 65, 65, 0.158);
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
 
-  /* Invertemos os textos gerais */
-  --text-white: #08090a;
+.sec-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--primary-pink);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
 
-  /* AQUI É O SEGREDO: Definimos as cores exatas que a Nav e os Sociais devem ter no modo claro */
-  --bg-navbar: #091016; /* Mantém o nav escuro! */
-  --text-navbar: #f0f4ef; /* Mantém o texto do nav claro! */
+.sec-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--text-black);
+  line-height: 1.18;
+  margin-bottom: 3rem;
+}
 
-  --bg-contact-btn: #fc6471; /* Exemplo: Botão contato rosa no modo claro */
-  --text-contact-btn: #ffffff; /* Texto do botão branco */
-
-  /* Ícones sociais brancos no modo claro */
-  --bg-socials: #08090a; /* Fundo do botão social escuro */
-  --text-socials: #ffffff; /* Ícone da rede social branco */
-
-  --hover-bg: #e2e2e2;
-  --border-translucent: rgba(0, 0, 0, 0.1);
+.sec-title em {
+  font-style: italic;
+  color: var(--text-metal);
 }

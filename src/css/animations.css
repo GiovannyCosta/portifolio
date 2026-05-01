@@ -1,0 +1,61 @@
+/* ── animations.css ───────────────────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s,
+    transform 0.7s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-l {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition:
+    opacity 0.7s,
+    transform 0.7s;
+}
+
+.reveal-l.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-r {
+  opacity: 0;
+  transform: translateX(28px);
+  transition:
+    opacity 0.7s,
+    transform 0.7s;
+}
+
+.reveal-r.visible {
+  opacity: 1;
+  transform: none;
+}
