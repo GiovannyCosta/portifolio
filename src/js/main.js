@@ -40,8 +40,6 @@ function applyLang(l) {
     btn.textContent = label;
   });
 }
-
-// Inicializa o idioma
 /* ── nav.js (lang toggle — ciclo único) ───────────────────── */
 function nextLang() {
   const idx = LANGS.indexOf(lang);
