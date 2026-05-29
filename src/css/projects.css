@@ -81,6 +81,20 @@
   padding: 1.5rem;
 }
 
+/* Estilo do primeiro card - SVG sempre visível */
+.proj-card:first-child .proj-thumb {
+  background-image: url("../../games-git.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Ícone com opacidade reduzida */
+.proj-card:first-child .proj-icon {
+  opacity: 0.15;
+  transition: opacity 0.25s;
+}
+
 .proj-title {
   font-family: var(--font-display);
   font-size: 1.15rem;
