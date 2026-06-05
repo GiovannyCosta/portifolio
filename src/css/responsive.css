@@ -24,6 +24,18 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .inovatech-card {
+    grid-template-columns: 1fr;
+  }
+
+  .inovatech-banner {
+    min-height: 280px;
+  }
+
+  .inovatech-title {
+    font-size: 2.6rem;
+  }
+
   .nav-links {
     gap: 1.1rem;
   }
@@ -54,6 +66,22 @@
   .skills-cats,
   .proj-grid {
     grid-template-columns: 1fr;
+  }
+
+  .inovatech-showcase {
+    margin-bottom: 3rem;
+  }
+
+  .inovatech-content {
+    padding: 1.4rem;
+  }
+
+  .inovatech-banner {
+    min-height: 220px;
+  }
+
+  .inovatech-title {
+    font-size: 2.1rem;
   }
 
   .about-stats {
@@ -109,5 +137,9 @@
 
   .stat-num {
     font-size: 1.8rem;
+  }
+
+  .inovatech-actions a {
+    width: 100%;
   }
 }

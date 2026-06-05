@@ -4,6 +4,204 @@
   border-top: 1px solid rgba(8, 9, 10, 0.05);
 }
 
+.inovatech-showcase {
+  margin-bottom: 4rem;
+}
+
+.inovatech-head {
+  margin-bottom: 1.5rem;
+  max-width: 760px;
+}
+
+.inovatech-title {
+  color: var(--text-black);
+  font-family: var(--font-display);
+  font-size: 3.25rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.05;
+  margin-bottom: 0.9rem;
+}
+
+.inovatech-intro {
+  color: var(--text-metal);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.inovatech-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.inovatech-card {
+  background: var(--bg-white);
+  border: 1px solid rgba(8, 9, 10, 0.08);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  overflow: hidden;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.25s,
+    transform 0.25s;
+}
+
+.inovatech-card:hover {
+  border-color: rgba(126, 211, 33, 0.32);
+  box-shadow: 0 18px 45px rgba(8, 9, 10, 0.09);
+  transform: translateY(-4px);
+}
+
+.inovatech-banner {
+  background: #061008;
+  min-height: 330px;
+  overflow: hidden;
+}
+
+.inovatech-banner img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.inovatech-banner--placeholder {
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(252, 100, 113, 0.08), rgba(126, 106, 247, 0.16)),
+    radial-gradient(circle at 18% 20%, rgba(252, 100, 113, 0.28), transparent 28%),
+    radial-gradient(circle at 84% 78%, rgba(126, 106, 247, 0.26), transparent 34%),
+    #08090a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.inovatech-banner--placeholder div {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: min(100%, 420px);
+}
+
+.inovatech-banner--placeholder span {
+  color: rgba(255, 255, 255, 0.68);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0;
+  margin-bottom: 0.65rem;
+  text-transform: uppercase;
+}
+
+.inovatech-banner--placeholder strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+.inovatech-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.inovatech-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.inovatech-meta span {
+  background: rgba(8, 9, 10, 0.04);
+  border: 1px solid rgba(8, 9, 10, 0.08);
+  border-radius: 999px;
+  color: var(--text-metal);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 0.35rem 0.65rem;
+}
+
+.inovatech-content h3 {
+  color: var(--text-black);
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-bottom: 0.8rem;
+}
+
+.inovatech-content p,
+.inovatech-points {
+  color: var(--text-metal);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.inovatech-points {
+  display: grid;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 1rem 0 1.25rem;
+  padding: 0;
+}
+
+.inovatech-points li {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.inovatech-points li::before {
+  background: var(--secondary-green);
+  border-radius: 50%;
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 0.65em;
+  width: 5px;
+}
+
+.inovatech-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.inovatech-actions a {
+  align-items: center;
+  border: 1px solid rgba(8, 9, 10, 0.12);
+  border-radius: 999px;
+  color: var(--text-black);
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 1rem;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.inovatech-actions a:hover {
+  background: var(--text-black);
+  border-color: var(--text-black);
+  color: #fff;
+}
+
 .proj-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
