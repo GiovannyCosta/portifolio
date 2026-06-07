@@ -65,19 +65,16 @@
         </div>
         <div class="gallery-grid">
           <figure class="gallery-item">
-            <img src="/src/img/inovatech-astro-verde.png" alt="Arte principal do Astro Verde">
+            <img src="/src/img/inovatech-prototipo.jpeg" alt="Foto do protótipo físico">
           </figure>
           <figure class="gallery-item">
-            <img src="" alt="">
+            <img src="/src/img/dashboard-astro-verde.png" alt="Tela do dashboard">
           </figure>
           <figure class="gallery-item">
-            <div class="gallery-placeholder">Tela do dashboard</div>
+            <img src="/src/img/inovatech-prototipo-evento.jpeg" alt="Protótipo Astro Verde apresentado na InovaTech">
           </figure>
           <figure class="gallery-item">
-            <div class="gallery-placeholder">Apresentação na feira</div>
-          </figure>
-          <figure class="gallery-item">
-            <div class="gallery-placeholder">Equipe e bastidores</div>
+            <img src="/src/img/fazenda-vertical-astro-verde.jpeg" alt="Cultivo vertical hidropônico Astro Verde">
           </figure>
         </div>
       </div>
@@ -288,6 +285,40 @@
       </div>
     </section>
   </main>
+
+  <div class="gallery-modal" id="galleryModal" aria-hidden="true">
+    <button class="gallery-modal__close" type="button" aria-label="Fechar imagem">x</button>
+    <img src="" alt="">
+  </div>
+
+  <script>
+    const galleryModal = document.getElementById("galleryModal");
+    const galleryModalImage = galleryModal.querySelector("img");
+    const galleryClose = galleryModal.querySelector(".gallery-modal__close");
+
+    document.querySelectorAll(".gallery-item img").forEach((image) => {
+      image.addEventListener("click", () => {
+        galleryModalImage.src = image.src;
+        galleryModalImage.alt = image.alt;
+        galleryModal.classList.add("is-open");
+        galleryModal.setAttribute("aria-hidden", "false");
+      });
+    });
+
+    function closeGalleryModal() {
+      galleryModal.classList.remove("is-open");
+      galleryModal.setAttribute("aria-hidden", "true");
+      galleryModalImage.src = "";
+    }
+
+    galleryClose.addEventListener("click", closeGalleryModal);
+    galleryModal.addEventListener("click", (event) => {
+      if (event.target === galleryModal) closeGalleryModal();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeGalleryModal();
+    });
+  </script>
 
 </body>
 
