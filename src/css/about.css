@@ -124,8 +124,8 @@
 
 .cursor-blink {
   display: inline-block;
-  width: 50px;
-  height: 13px;
+  width: 5px;
+  height: 15px;
   background: var(--primary-pink);
   animation: blink 1s infinite;
   vertical-align: middle;
