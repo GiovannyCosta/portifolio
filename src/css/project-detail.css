@@ -162,6 +162,16 @@ body {
   border-top: 1px solid rgba(8, 9, 10, 0.06);
 }
 
+.project-section--documentation {
+  background: #061008;
+  border-top: 1px solid rgba(240, 244, 239, 0.08);
+  padding-bottom: 5rem;
+}
+
+.project-section--documentation .project-heading {
+  color: var(--text-white);
+}
+
 .project-section__inner {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -235,6 +245,7 @@ body {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.55fr);
+  align-items: stretch;
 }
 
 .doc-panel,
@@ -244,6 +255,11 @@ body {
   border: 1px solid rgba(8, 9, 10, 0.08);
   border-radius: 8px;
   padding: 1.5rem;
+}
+
+.project-section--documentation .doc-panel,
+.project-section--documentation .requirements-panel {
+  min-height: 100%;
 }
 
 .doc-panel p,
