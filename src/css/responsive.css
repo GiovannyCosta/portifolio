@@ -24,10 +24,6 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .proj-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .inovatech-card {
     grid-template-columns: 1fr;
   }
@@ -67,8 +63,7 @@
     display: flex;
   }
 
-  .skills-cats,
-  .proj-grid {
+  .skills-cats {
     grid-template-columns: 1fr;
   }
 
@@ -153,5 +148,14 @@
 
   .inovatech-actions a {
     width: 100%;
+  }
+
+  .project-carousel {
+    --project-carousel-gap: 0.85rem;
+  }
+
+  .project-banner {
+    border-radius: 10px;
+    flex-basis: 82vw;
   }
 }

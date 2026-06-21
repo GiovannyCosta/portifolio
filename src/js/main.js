@@ -41,6 +41,7 @@ const modulesToLoad = [
   "reveal.js",
   "skills.js",
   "stats.js",
+  "projectBanners.js",
   "copyText.js",
 ];
 

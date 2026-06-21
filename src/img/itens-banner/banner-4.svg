@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Banner 4</title>
+  <desc id="desc">Banner editavel para projeto em destaque.</desc>
+  <rect width="1200" height="420" fill="#f0f4ef"/>
+  <rect x="28" y="28" width="1144" height="364" rx="28" fill="#ffffff"/>
+  <circle cx="914" cy="210" r="148" fill="#08090a"/>
+  <path d="M808 214h212" stroke="#7ed321" stroke-width="28" stroke-linecap="round"/>
+  <path d="M914 104v212" stroke="#fc6471" stroke-width="28" stroke-linecap="round"/>
+  <path d="M104 284h428" stroke="#08090a" stroke-width="18" stroke-linecap="round"/>
+  <path d="M104 224h304" stroke="#08090a" stroke-width="18" stroke-linecap="round" opacity=".55"/>
+  <path d="M104 160h482" stroke="#08090a" stroke-width="48" stroke-linecap="round"/>
+  <text x="108" y="100" fill="#fc6471" font-family="Arial, sans-serif" font-size="34" font-weight="700">BANNER 4</text>
+</svg>
