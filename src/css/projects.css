@@ -221,13 +221,13 @@
 }
 
 .project-banner {
-  aspect-ratio: 20 / 7;
+  aspect-ratio: 2 / 1;
   background: var(--bg-white);
   border: 1px solid rgba(8, 9, 10, 0.08);
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(8, 9, 10, 0.06);
   display: block;
-  flex: 0 0 clamp(320px, 64vw, 920px);
+  flex: 0 0 clamp(320px, 58vw, 820px);
   overflow: hidden;
   text-decoration: none;
   transition:
