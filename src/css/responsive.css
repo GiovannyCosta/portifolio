@@ -7,6 +7,10 @@
     gap: 3rem;
   }
 
+  .contact-logo-panel {
+    justify-content: flex-start;
+  }
+
   .hero-visual {
     order: -1;
   }
@@ -89,8 +93,16 @@
     gap: 1rem;
   }
 
-  .form-row {
+  .contact-items {
     grid-template-columns: 1fr;
+  }
+
+  .contact-logo-panel {
+    justify-content: center;
+  }
+
+  .contact-logo {
+    width: min(70vw, 220px);
   }
 
   .hero-frame {

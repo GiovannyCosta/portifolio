@@ -1,5 +1,7 @@
 /* ── form.js ──────────────────────────────────────────────── */
-document.getElementById("contactForm").addEventListener("submit", (e) => {
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const btn = e.target.querySelector(".btn-send span");
   btn.textContent = T[lang].f_ok;
