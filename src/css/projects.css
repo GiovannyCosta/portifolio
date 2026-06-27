@@ -204,20 +204,24 @@
 
 .project-carousel {
   --project-carousel-gap: 1.25rem;
+  --project-banner-width: clamp(320px, 58vw, 820px);
+  --project-side-offset: min(34vw, 460px);
+  cursor: grab;
   margin-inline: calc(50% - 50vw);
   overflow: hidden;
-  padding-block: 0.25rem 1rem;
+  padding-block: 0.25rem 1.25rem;
+  position: relative;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.project-carousel.is-dragging {
+  cursor: grabbing;
 }
 
 .project-carousel-track {
-  animation: project-carousel-scroll 56s linear infinite;
-  display: flex;
-  gap: var(--project-carousel-gap);
-  width: max-content;
-}
-
-.project-carousel:hover .project-carousel-track {
-  animation-play-state: paused;
+  height: clamp(170px, 29vw, 410px);
+  position: relative;
 }
 
 .project-banner {
@@ -227,19 +231,55 @@
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(8, 9, 10, 0.06);
   display: block;
-  flex: 0 0 clamp(320px, 58vw, 820px);
+  left: 50%;
   overflow: hidden;
+  position: absolute;
+  top: 50%;
   text-decoration: none;
   transition:
     border-color 0.2s,
+    filter 0.25s,
+    opacity 0.25s,
     box-shadow 0.25s,
     transform 0.25s;
+  width: var(--project-banner-width);
+  will-change: opacity, transform;
+}
+
+.project-banner.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 3;
+}
+
+.project-banner.is-previous,
+.project-banner.is-next {
+  filter: saturate(0.82);
+  opacity: 0.48;
+  pointer-events: auto;
+  transform: translate(calc(-50% - var(--project-side-offset)), -50%) scale(0.84);
+  z-index: 2;
+}
+
+.project-banner.is-next {
+  transform: translate(calc(-50% + var(--project-side-offset)), -50%) scale(0.84);
+}
+
+.project-banner.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.72);
+  z-index: 1;
 }
 
 .project-banner[href]:hover {
   border-color: rgba(252, 100, 113, 0.28);
   box-shadow: 0 16px 38px rgba(8, 9, 10, 0.1);
-  transform: translateY(-3px);
+}
+
+.project-banner[href].is-active:hover {
+  transform: translate(-50%, calc(-50% - 3px)) scale(1);
 }
 
 .project-banner img {
@@ -247,14 +287,4 @@
   height: 100%;
   object-fit: cover;
   width: 100%;
-}
-
-@keyframes project-carousel-scroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-50% - (var(--project-carousel-gap) / 2)));
-  }
 }

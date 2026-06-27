@@ -152,10 +152,11 @@
 
   .project-carousel {
     --project-carousel-gap: 0.85rem;
+    --project-banner-width: 82vw;
+    --project-side-offset: 50vw;
   }
 
   .project-banner {
     border-radius: 10px;
-    flex-basis: 82vw;
   }
 }
