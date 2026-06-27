@@ -202,6 +202,10 @@
   color: #fff;
 }
 
+.inovatech-actions .is-hidden-action {
+  display: none;
+}
+
 .project-carousel {
   --project-carousel-gap: 1.25rem;
   --project-banner-width: clamp(320px, 58vw, 820px);
@@ -343,65 +347,4 @@
   height: 100%;
   object-fit: cover;
   width: 100%;
-}
-
-.tech-ticker {
-  background: rgba(8, 9, 10, 0.045);
-  border: 1px solid rgba(8, 9, 10, 0.06);
-  border-radius: 8px;
-  margin: 0.45rem auto 0;
-  max-width: min(100%, 760px);
-  overflow: hidden;
-  padding: 0.55rem 0;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
-}
-
-.tech-ticker-track {
-  animation: tech-ticker-scroll 28s linear infinite;
-  display: flex;
-  width: max-content;
-}
-
-.tech-ticker:hover .tech-ticker-track {
-  animation-play-state: paused;
-}
-
-.tech-ticker-group {
-  align-items: center;
-  display: flex;
-  gap: clamp(1rem, 3vw, 2rem);
-  padding-inline: clamp(0.5rem, 1.8vw, 1.2rem);
-}
-
-.tech-ticker img {
-  display: block;
-  height: 24px;
-  opacity: 0.64;
-  transform: translateZ(0);
-  transition:
-    opacity 0.2s,
-    transform 0.2s;
-  width: 24px;
-}
-
-.tech-ticker img:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-@keyframes tech-ticker-scroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .tech-ticker-track {
-    animation-duration: 80s;
-  }
 }

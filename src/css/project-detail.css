@@ -233,6 +233,14 @@ body {
   transform-origin: left top;
 }
 
+.gallery-item--screen img {
+  background: #fff;
+  object-fit: contain;
+  object-position: center;
+  padding: 0.35rem;
+  transform: none;
+}
+
 .gallery-item::after {
   align-items: center;
   background: rgba(6, 16, 8, 0.78);
