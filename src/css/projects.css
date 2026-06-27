@@ -219,6 +219,62 @@
   cursor: grabbing;
 }
 
+.project-carousel-arrow {
+  align-items: center;
+  background: rgba(8, 9, 10, 0.5);
+  border: 1px solid rgba(240, 244, 239, 0.18);
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  height: 42px;
+  justify-content: center;
+  opacity: 0.72;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    opacity 0.2s,
+    transform 0.2s;
+  width: 42px;
+  z-index: 5;
+}
+
+.project-carousel-arrow::before {
+  border-color: var(--text-white);
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  content: "";
+  height: 10px;
+  width: 10px;
+}
+
+.project-carousel-arrow--previous {
+  left: max(1.25rem, calc(50% - 470px));
+}
+
+.project-carousel-arrow--previous::before {
+  transform: rotate(135deg) translate(-1px, -1px);
+}
+
+.project-carousel-arrow--next {
+  right: max(1.25rem, calc(50% - 470px));
+}
+
+.project-carousel-arrow--next::before {
+  transform: rotate(-45deg) translate(-1px, -1px);
+}
+
+.project-carousel-arrow:hover,
+.project-carousel-arrow:focus-visible {
+  background: rgba(8, 9, 10, 0.76);
+  border-color: rgba(240, 244, 239, 0.4);
+  opacity: 1;
+  outline: none;
+  transform: translateY(-50%) scale(1.05);
+}
+
 .project-carousel-track {
   height: clamp(170px, 29vw, 410px);
   position: relative;
@@ -287,4 +343,65 @@
   height: 100%;
   object-fit: cover;
   width: 100%;
+}
+
+.tech-ticker {
+  background: rgba(8, 9, 10, 0.045);
+  border: 1px solid rgba(8, 9, 10, 0.06);
+  border-radius: 8px;
+  margin: 0.45rem auto 0;
+  max-width: min(100%, 760px);
+  overflow: hidden;
+  padding: 0.55rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.tech-ticker-track {
+  animation: tech-ticker-scroll 28s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.tech-ticker:hover .tech-ticker-track {
+  animation-play-state: paused;
+}
+
+.tech-ticker-group {
+  align-items: center;
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+  padding-inline: clamp(0.5rem, 1.8vw, 1.2rem);
+}
+
+.tech-ticker img {
+  display: block;
+  height: 24px;
+  opacity: 0.64;
+  transform: translateZ(0);
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+  width: 24px;
+}
+
+.tech-ticker img:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+@keyframes tech-ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-ticker-track {
+    animation-duration: 80s;
+  }
 }

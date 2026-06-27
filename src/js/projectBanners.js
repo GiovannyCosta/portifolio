@@ -44,6 +44,8 @@ function createProjectBanner(item) {
 function loadProjectBanners() {
   const carousel = document.querySelector(".project-carousel");
   const track = document.getElementById("projectCarouselTrack");
+  const previousButton = carousel?.querySelector(".project-carousel-arrow--previous");
+  const nextButton = carousel?.querySelector(".project-carousel-arrow--next");
   if (!carousel || !track || projectBanners.length === 0) return;
 
   let activeIndex = 0;
@@ -108,6 +110,23 @@ function loadProjectBanners() {
     autoplayId = setInterval(goToNextSlide, 4200);
   }
 
+  function resumeAutoplayWhenAllowed() {
+    if (!isHoveringActiveBanner) startAutoplay();
+  }
+
+  function handleManualNavigation(callback) {
+    callback();
+    resumeAutoplayWhenAllowed();
+  }
+
+  previousButton?.addEventListener("click", () => {
+    handleManualNavigation(goToPreviousSlide);
+  });
+
+  nextButton?.addEventListener("click", () => {
+    handleManualNavigation(goToNextSlide);
+  });
+
   carousel.addEventListener("pointerover", (event) => {
     if (!event.target.closest(".project-banner.is-active")) return;
     isHoveringActiveBanner = true;
@@ -122,6 +141,7 @@ function loadProjectBanners() {
   });
 
   carousel.addEventListener("pointerdown", (event) => {
+    if (event.target.closest(".project-carousel-arrow")) return;
     isPointerDown = true;
     pointerStartX = event.clientX;
     pointerDeltaX = 0;
@@ -144,13 +164,13 @@ function loadProjectBanners() {
       else goToPreviousSlide();
     }
 
-    if (!isHoveringActiveBanner) startAutoplay();
+    resumeAutoplayWhenAllowed();
   });
 
   carousel.addEventListener("pointercancel", () => {
     isPointerDown = false;
     carousel.classList.remove("is-dragging");
-    if (!isHoveringActiveBanner) startAutoplay();
+    resumeAutoplayWhenAllowed();
   });
 
   carousel.addEventListener("click", (event) => {
@@ -159,7 +179,7 @@ function loadProjectBanners() {
 
     event.preventDefault();
     goToSlide(Number(clickedBanner.dataset.index));
-    if (!isHoveringActiveBanner) startAutoplay();
+    resumeAutoplayWhenAllowed();
   });
 
   updateCarousel();

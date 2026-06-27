@@ -159,4 +159,27 @@
   .project-banner {
     border-radius: 10px;
   }
+
+  .project-carousel-arrow {
+    height: 34px;
+    width: 34px;
+  }
+
+  .project-carousel-arrow--previous {
+    left: 0.75rem;
+  }
+
+  .project-carousel-arrow--next {
+    right: 0.75rem;
+  }
+
+  .tech-ticker {
+    max-width: 100%;
+    padding-block: 0.45rem;
+  }
+
+  .tech-ticker img {
+    height: 21px;
+    width: 21px;
+  }
 }
