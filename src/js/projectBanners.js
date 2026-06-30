@@ -3,7 +3,7 @@ const projectBanners = [
   {
     image: "./src/img/itens-banner/banner-1.png",
     alt: "Banner 1",
-    link: "",
+    link: "https://github.com/stars/GiovannyCosta/lists/game-list",
   },
   {
     image: "./src/img/itens-banner/banner-2.png",
