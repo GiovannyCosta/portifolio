@@ -1,0 +1,237 @@
+.hero {
+  display:grid;
+  grid-template-columns:0.9fr 1.15fr;
+  gap:40px;
+  padding-block:76px 70px;
+  align-items:center
+}
+.eyebrow {
+  font-size:10px;
+  letter-spacing:2px;
+  font-weight:600;
+  margin:0 0 26px;
+  display:flex;
+  align-items:center;
+  gap:10px
+}
+.status-dot {
+  width:7px;
+  height:7px;
+  background:#718d47;
+  border-radius:50%;
+  display:inline-block
+}
+.hero h1 {
+  font-weight:500;
+  font-size:clamp(60px,6.4vw,90px);
+  line-height:1.06;
+  letter-spacing:-5px;
+  margin:0 0 28px;
+  position:relative
+}
+em {
+  font-family:var(--serif);
+  font-weight:500;
+  color:#63764b
+}
+.spark {
+  display:inline-block;
+  font-size:65px;
+  color:#6a824f;
+  vertical-align:middle;
+  margin-left:25px;
+  font-weight:400
+}
+.hero-description {
+  max-width:400px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.8;
+  margin:0 0 29px
+}
+.actions {
+  display:flex;
+  align-items:center;
+  gap:22px;
+  flex-wrap:wrap
+}
+.button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:26px;
+  padding:17px 22px;
+  font-size:13px;
+  font-weight:500;
+  border-radius:5px;
+  transition:transform .2s,background .2s
+}
+.button:hover {
+  transform:translateY(-3px)
+}
+.primary {
+  color:white;
+  background:var(--ink)
+}
+.primary:hover {
+  background:#3b4f3d
+}
+.text-link {
+  font-size:12px;
+  font-weight:500;
+  border-bottom:1px solid #b6beac;
+  padding-bottom:5px
+}
+.hero-signature {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-top:36px
+}
+.avatar {
+  font-family:var(--serif);
+  width:40px;
+  height:40px;
+  border:1px solid #c4ccb9;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:26px;
+  background:#e8ebdf
+}
+.hero-signature p {
+  font-size:11px;
+  color:var(--muted);
+  margin:0
+}
+.hero-signature strong {
+  font-size:12px;
+  color:var(--ink);
+  font-weight:500
+}
+.hero-art {
+  position:relative;
+  min-height:510px;
+  background:transparent;
+  border-radius:8px;
+  isolation:isolate;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:28px 8px;
+  overflow:hidden
+}
+.art-topline,.art-caption {
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  font-size:8px;
+  letter-spacing:1.5px;
+  position:absolute;
+  left:28px;
+  right:28px;
+  transform:rotate(-2deg)
+}
+.art-topline {
+  top:10px
+}
+.art-caption {
+  bottom:24px;
+  letter-spacing:1px;
+  transform:none
+}
+.art-caption>span {
+  transform:rotate(-2deg)
+}
+.art-caption a {
+  text-decoration:underline;
+  text-underline-offset:4px;
+  transform:rotate(4deg)
+}
+.art-orbit {
+  display:none;
+  position:absolute;
+  width:450px;
+  height:450px;
+  border:1px solid #becba9;
+  border-radius:50%;
+  top:60px;
+  left:70px;
+  z-index:-1
+}
+.art-orbit:after {
+  content:'';
+  position:absolute;
+  inset:35px;
+  border:1px solid #becba9;
+  border-radius:50%
+}
+.browser-preview {
+  background:#fff;
+  box-shadow:none;
+  transform:rotate(-5deg);
+  border:5px solid #fff;
+  border-radius:8px;
+  overflow:hidden;
+  transition:transform .3s
+}
+.browser-preview:hover {
+  transform:rotate(-2deg)
+}
+.browser-preview--concept {
+  transform:rotate(-2deg)
+}
+.browser-preview--concept:hover {
+  transform:rotate(-2deg)
+}
+.browser-bar {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:7px;
+  padding:8px;
+  color:#747e72;
+  gap:10px
+}
+.browser-bar>span:first-child {
+  letter-spacing:2px;
+  color:#99ab89
+}
+.browser-preview img {
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  object-position:top
+}
+.hero-art .browser-preview--concept img {
+  height:auto;
+  aspect-ratio:5 / 3;
+  object-fit:contain
+}
+.art-note {
+  align-self:flex-end;
+  display:flex;
+  gap:15px;
+  align-items:center;
+  background:#fcfcf6;
+  border-radius:6px;
+  padding:18px 24px;
+  transform:translateY(-24px) rotate(4deg);
+  margin-top:-8px;
+  margin-right:4px;
+  box-shadow:0 10px 25px #33422713;
+  font-size:16px;
+  line-height:1.35
+}
+.art-note strong {
+  font-weight:500
+}
+.note-icon {
+  font-size:30px;
+  color:#799657
+}
+.note-star {
+  color:#9daf84;
+  font-size:35px;
+  margin-left:20px
+}

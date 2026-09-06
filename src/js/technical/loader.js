@@ -1,4 +1,4 @@
-// src/js/loader.js
+// src/js/technical/loader.js
 
 // 🚀 CONTROLE DE CACHE: Altere este número sempre que fizer um novo deploy no Vercel!
 const APP_VERSION = "v1.1";
@@ -12,9 +12,9 @@ if (savedVersion !== APP_VERSION) {
 
 // 2. Forçar Cache Busting no CSS
 // Isso impede que o celular do usuário segure o CSS velho
-const styleLink = document.querySelector('link[href="./src/css/style.css"]');
+const styleLink = document.querySelector('link[href="/src/css/technical/style.css"]');
 if (styleLink) {
-  styleLink.href = `./src/css/style.css?v=${APP_VERSION}`;
+  styleLink.href = `/src/css/technical/style.css?v=${APP_VERSION}`;
 }
 
 // 3. Injetar o HTML do Loader imediatamente

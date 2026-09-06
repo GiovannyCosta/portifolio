@@ -1,6 +1,6 @@
-@import url("/src/css/root.css");
-@import url("/src/css/header.css");
-@import url("/src/css/animations.css");
+@import url("/src/css/technical/root.css");
+@import url("/src/css/technical/header.css");
+@import url("/src/css/technical/animations.css");
 
 body {
   background:

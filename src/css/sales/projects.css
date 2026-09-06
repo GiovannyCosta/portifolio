@@ -1,0 +1,129 @@
+.work-section {
+  background:#edeee6
+}
+.work-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:36px
+}
+.work-image {
+  height:320px;
+  display:flex;
+  align-items:center;
+  padding:0;
+  position:relative;
+  border-radius:7px;
+  overflow:hidden
+}
+.green {
+  background:#d5e2c5
+}
+.lilac {
+  background:#dfdcea
+}
+.work-image img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  transition:transform .3s
+}
+.work-image:hover img {
+  transform:scale(1.03)
+}
+.round-arrow {
+  position:absolute;
+  bottom:16px;
+  right:16px;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:var(--paper);
+  display:grid;
+  place-items:center;
+  font-size:23px
+}
+.work-card--clinic {
+  grid-column: 1 / -1;
+}
+.work-image.work-image--clinic {
+  height: auto;
+  aspect-ratio: 2 / 1;
+  padding: 0;
+  background: #eaf5f4;
+}
+.work-image--clinic img {
+  height: auto;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.work-image--clinic:hover img {
+  transform: none;
+}
+.work-card--clinic > p {
+  max-width: 760px;
+}
+.work-meta {
+  display:flex;
+  justify-content:space-between;
+  font-size:9px;
+  letter-spacing:1.3px;
+  color:#67715e;
+  margin:21px 0 10px
+}
+.work-card h3 {
+  font-size:26px;
+  font-weight:500;
+  letter-spacing:-.7px;
+  margin:0
+}
+.work-card h3 a {
+  display:flex;
+  justify-content:space-between
+}
+.work-card>p {
+  color:var(--muted);
+  font-size:13px;
+  max-width:490px;
+  margin:12px 0 20px
+}
+.work-links {
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  font-size:10px;
+  align-items:center
+}
+.work-links a {
+  text-decoration:underline;
+  text-underline-offset:4px
+}
+.work-links>span {
+  color:var(--muted)
+}
+.more-work {
+  margin-top:45px;
+  border-block:1px solid #ccd2c3
+}
+.more-work summary {
+  padding:20px 0
+}
+.more-work p {
+  color:var(--muted);
+  font-size:13px
+}
+.banner-gallery {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  padding-block:10px 25px
+}
+.banner-gallery img {
+  width:100%;
+  border-radius:5px
+}

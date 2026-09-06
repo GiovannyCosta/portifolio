@@ -43,6 +43,13 @@ nav {
   color: var(--primary-pink);
 }
 
+.technical-brand-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .nav-links {
   display: flex;
   gap: 1.5rem;

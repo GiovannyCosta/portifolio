@@ -1,0 +1,52 @@
+/* Identidade do Clínica Psi sobre a estrutura compartilhada de projetos. */
+html { scroll-padding-top: 90px; }
+.clinic-project { --secondary-green: #92dfdf; background: #f0f4ef; }
+.clinic-project .project-hero,
+.clinic-project .project-meta,
+.clinic-project .project-section--documentation { background: #143b40; }
+.clinic-project .project-header { background: #143b40f5; }
+.clinic-project .project-meta { max-width: none; padding-inline: max(2rem, calc((100vw - 1200px) / 2)); }
+.clinic-project .project-cover { border-color: #92dfdf55; }
+.clinic-project .project-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: contain;
+}
+.clinic-project .project-label { color: #236d76; }
+.clinic-project .project-section--documentation .project-label { color: #92dfdf; }
+.clinic-project a:focus-visible,
+.clinic-project [tabindex]:focus-visible { outline: 3px solid #318d98; outline-offset: 5px; }
+.clinic-skip { position: fixed; top: -100px; left: 20px; padding: 12px; background: white; z-index: 400; }
+.clinic-skip:focus { top: 12px; }
+.clinic-features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.clinic-features .clinic-number { color: #236d76; font-family: var(--font-mono); font-size: 11px; margin-bottom: 12px; }
+.clinic-project .doc-panel p + p { margin-top: 1rem; }
+.clinic-presentation { align-self: center; min-width: 0; }
+.clinic-presentation img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.clinic-presentation figcaption { margin-top: 12px; font-size: 12px; color: #343a40; }
+.clinic-presentation a { color: inherit; text-underline-offset: 4px; }
+.clinic-table-wrap { overflow-x: auto; background: #f0f4ef; border-radius: 8px; }
+.clinic-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+.clinic-table caption { padding: 1.2rem; text-align: left; font-weight: 500; background: #e1eeee; }
+.clinic-table th, .clinic-table td { padding: 1rem 1.2rem; border-bottom: 1px solid #d6e1dc; vertical-align: top; }
+.clinic-table thead { background: #e8f0ec; }
+.clinic-table tbody th { font-weight: 500; width: 25%; }
+.clinic-architecture-note { color: #d5e4e1; font-size: 14px; line-height: 1.8; max-width: 960px; margin-top: 1.5rem; }
+.clinic-footer { background: #143b40; color: #e2efea; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; padding: 2rem max(2rem, calc((100vw - 1200px) / 2)); font-size: 12px; }
+.clinic-footer a { color: inherit; text-underline-offset: 4px; }
+@media (max-width: 760px) {
+  .clinic-project .project-header .nav-links { display: none; }
+  .clinic-features { grid-template-columns: 1fr; }
+  .clinic-table { font-size: 12px; }
+  .clinic-table th, .clinic-table td { padding: .85rem; overflow-wrap: anywhere; }
+}
+@media (max-width: 640px) {
+  .clinic-project .project-meta { padding-inline: 1.25rem; }
+  .clinic-footer { padding-inline: 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .clinic-project *, .clinic-project *::after { animation: none !important; transition: none !important; }
+}

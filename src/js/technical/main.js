@@ -53,7 +53,7 @@ async function loadAllModules() {
     try {
       await new Promise((resolve, reject) => {
         const script = document.createElement("script");
-        script.src = `./src/js/${moduleName}?v=${version}`;
+        script.src = `/src/js/technical/${moduleName}?v=${version}`;
 
         script.onload = () => {
           console.log(`✅ [Módulo] ${moduleName} carregado.`);

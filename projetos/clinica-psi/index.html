@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Clínica Psi: aplicativo Android e Web para organizar fila de espera, horários, pacientes e faltas de uma clínica-escola de psicologia, com funcionamento local e integração XLSM e DOCX.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/projects/project-detail.css">
+  <link rel="stylesheet" href="/src/css/projects/clinica-psi.css">
+  <title>Clínica Psi | Giovanny Costa</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/src/ico/gioenv-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/src/ico/gioenv-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/src/ico/gioenv-180.png">
+<link rel="manifest" href="/src/ico/gioenv.webmanifest">
+</head>
+<body class="clinic-project">
+  <a class="clinic-skip" href="#conteudo">Pular para o conteúdo</a>
+  <header id="header" class="project-header">
+    <nav aria-label="Navegação principal">
+      <a href="/" class="nav-logo"><span>//</span>Gio.Env</a>
+      <ul class="nav-links">
+        <li><a href="/#home">Início</a></li>
+        <li><a href="/#about">Sobre</a></li>
+        <li><a href="/tecnico.html#skills">Habilidades</a></li>
+        <li><a href="/#projects" class="active">Projetos</a></li>
+        <li><a href="/#contact">Contato</a></li>
+      </ul>
+      <div class="nav-controls"><a href="/#clinica-psi" class="nav-cta">Voltar</a></div>
+    </nav>
+  </header>
+  <main class="project-main" id="conteudo">
+    <section class="project-hero">
+      <div class="project-hero__grid">
+        <div>
+          <p class="project-eyebrow">Android e Web · gestão da rotina clínica</p>
+          <h1 class="project-title">Clínica <em>Psi</em></h1>
+          <p class="project-summary">Organização para cuidar melhor. Um aplicativo para reunir fila de espera, pacientes, horários e controle de faltas de uma clínica-escola de psicologia, mantendo a compatibilidade com os documentos usados pela equipe.</p>
+          <div class="project-actions">
+            <a href="#funcionalidades">Conhecer o aplicativo</a>
+            <a href="#documentacao">Tecnologias e arquitetura</a>
+            <a href="#evolucao">Funcionamento e evolução</a>
+          </div>
+        </div>
+        <div class="project-cover"><img src="/src/img/projects/clinica-psi/clinica-psi-banner.png" width="1000" height="500" alt="Apresentação do Clínica Psi com a logo de borboleta e a tela inicial do aplicativo"></div>
+      </div>
+    </section>
+    <div class="project-meta" aria-label="Resumo do projeto">
+      <div><span>Área</span>Clínica-escola de psicologia</div>
+      <div><span>Plataformas</span>Android e Web</div>
+      <div><span>Documentos</span>XLSM e DOCX</div>
+      <div><span>Funcionamento</span>Aplicativo funcional · uso local</div>
+    </div>
+    <section class="project-section project-section--light" id="sobre">
+      <div class="project-section__inner">
+        <div class="project-section__head"><p class="project-label">Sobre o projeto</p><h2 class="project-heading">Da rotina em arquivos a uma experiência mais simples</h2></div>
+        <div class="content-grid">
+          <article class="doc-panel"><h3>O ponto de partida</h3><p>O Clínica Psi nasceu da necessidade de tornar mais prática a consulta e a atualização de informações que já faziam parte da rotina da clínica em planilhas e documentos do Word.</p><p>A proposta é concentrar essas tarefas em um ambiente organizado, acessível pelo celular ou pelo navegador, sem exigir conexão com um servidor para as operações locais. O aplicativo trabalha com os dados dos documentos existentes e permite exportar cópias atualizadas.</p></article>
+          <article class="doc-panel"><h3>O desafio</h3><p>Transformar uma rotina baseada em arquivos em uma experiência mais direta, mantendo a compatibilidade com o material utilizado pela equipe: organizar cadastros, localizar atendimentos, distinguir prioridades e registrar faltas sem perder a estrutura dos documentos de origem.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="project-section project-section--muted" id="funcionalidades">
+      <div class="project-section__inner">
+        <div class="project-section__head"><p class="project-label">A solução</p><h2 class="project-heading">Quatro áreas para organizar o dia</h2></div>
+        <div class="clinic-features">
+          <article class="research-card"><p class="clinic-number">01 / FILA</p><h3>Fila de espera</h3><p>Pesquisa por nome ou telefone, filtros e meses em ordem cronológica ajudam a localizar cadastros. As classificações Normal, Prioridade e Urgente usam cores para facilitar a identificação.</p><ul class="doc-list"><li>Cadastro por etapas, campos de seleção e validação do mês da solicitação.</li><li>Edição de informações, marcação de atendimento e arquivamento com motivos padronizados.</li></ul></article>
+          <article class="research-card"><p class="clinic-number">02 / HORÁRIOS</p><h3>Agenda e controle de faltas</h3><p>A agenda utiliza o modelo DOCX da clínica e oferece consulta por dia ou pela lista completa. Faltas justificadas e não justificadas recebem marcações distintas.</p><ul class="doc-list"><li>Consulta dos atendimentos em uma tela dedicada.</li><li>Exportação do documento atualizado para continuar sendo utilizado fora do aplicativo.</li></ul></article>
+          <article class="research-card"><p class="clinic-number">03 / PACIENTES</p><h3>Pacientes por profissional</h3><p>Um diretório organiza os atendimentos da agenda por psicoterapeuta, com pesquisa por paciente ou profissional. Ao selecionar um atendimento, o usuário acessa seu cartão na tela de horários.</p><ul class="doc-list"><li>O diretório representa os atendimentos do DOCX.</li><li>A fila de espera permanece separada, sem presumir vínculos entre registros.</li></ul></article>
+          <article class="research-card"><p class="clinic-number">04 / DASHBOARD</p><h3>Indicadores da fila</h3><p>Uma tela própria reúne indicadores calculados a partir da fila, permitindo consultar totais e distribuições dos registros sem misturar essa visualização com o cadastro operacional.</p><ul class="doc-list"><li>Visão geral dos registros da fila de espera.</li><li>Separação entre consulta de indicadores e atualização dos cadastros.</li></ul></article>
+        </div>
+      </div>
+    </section>
+    <section class="project-section project-section--light" id="galeria">
+      <div class="project-section__inner">
+        <div class="project-section__head"><p class="project-label">Experiência de uso</p><h2 class="project-heading">Uma interface próxima de quem usa</h2></div>
+        <div class="content-grid">
+          <figure class="clinic-presentation"><a href="/src/img/projects/clinica-psi/clinica-psi-tecnologias.png" target="_blank" rel="noopener" aria-label="Ampliar banner das tecnologias do Clínica Psi"><img src="/src/img/projects/clinica-psi/clinica-psi-tecnologias.png" width="1000" height="500" loading="lazy" alt="Tecnologias do Clínica Psi: JavaScript, Java, Gradle, HTML e CSS, IndexedDB e JSZip"></a><figcaption>Tecnologias que dão forma à experiência · <a href="/src/img/projects/clinica-psi/clinica-psi-tecnologias.png" target="_blank" rel="noopener">Ampliar imagem ↗</a></figcaption></figure>
+          <article class="doc-panel"><h3>Navegação clara, tarefas dedicadas</h3><p>Tons de azul-petróleo, cartões arredondados, ícones coloridos e suporte a tema claro e escuro compõem a experiência. A navegação inferior facilita a troca de telas.</p><ul class="doc-list"><li>Cadastro sequencial e confirmação personalizada de saída para orientar as tarefas.</li><li>Configurações reúne tema, histórico, documentos ativos e orientações de backup.</li><li>Layout responsivo compartilhado entre celular e navegador.</li></ul></article>
+        </div>
+      </div>
+    </section>
+    <section class="project-section project-section--documentation" id="documentacao">
+      <div class="project-section__inner">
+        <div class="project-section__head"><p class="project-label">Documentação</p><h2 class="project-heading">Tecnologias e arquitetura</h2></div>
+        <div class="clinic-table-wrap" role="region" aria-label="Tabela de tecnologias" tabindex="0">
+          <table class="clinic-table"><caption>Camadas do aplicativo e suas responsabilidades</caption><thead><tr><th scope="col">Camada</th><th scope="col">Tecnologias e responsabilidade</th></tr></thead><tbody>
+            <tr><th scope="row">Interface</th><td>HTML, CSS e JavaScript; layout responsivo compartilhado entre Web e APK.</td></tr>
+            <tr><th scope="row">Android</th><td>Java e WebView; integração com navegação e compartilhamento nativos.</td></tr>
+            <tr><th scope="row">Documentos</th><td>JSZip e manipulação de XML dos pacotes OOXML de XLSM e DOCX.</td></tr>
+            <tr><th scope="row">Persistência</th><td>IndexedDB e localStorage para dados mantidos no dispositivo.</td></tr>
+            <tr><th scope="row">Desenvolvimento</th><td>Node.js e scripts de validação, build e incorporação de documentos.</td></tr>
+            <tr><th scope="row">Testes e entrega</th><td>Testes JavaScript e Python, Gradle e GitHub Actions.</td></tr>
+          </tbody></table>
+        </div>
+        <p class="clinic-architecture-note">O APK utiliza os mesmos arquivos de interface da versão Web, permitindo testar o layout no navegador e manter uma experiência visual consistente. Recursos nativos, como o compartilhamento do Android, continuam exigindo testes no aparelho.</p>
+      </div>
+    </section>
+    <section class="project-section project-section--light" id="decisoes">
+      <div class="project-section__inner">
+        <div class="project-section__head"><p class="project-label">Decisões técnicas</p><h2 class="project-heading">Preservar documentos e o trabalho da equipe</h2></div>
+        <div class="research-grid">
+          <article class="research-card"><h3>Compatibilidade</h3><p>Preservar as macros do XLSM sem executá-las dentro do aplicativo. Atualizar documentos compatíveis sem transformá-los em relatórios de outro formato.</p></article>
+          <article class="research-card"><h3>Dados locais</h3><p>Evitar a substituição automática do trabalho salvo ao atualizar a base inicial. Oferecer histórico, restauração e backups protegidos por senha.</p></article>
+          <article class="research-card"><h3>Responsabilidades claras</h3><p>Separar a fila dos atendimentos do DOCX e reutilizar a interface entre Android e Web para reduzir diferenças de apresentação e manutenção.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="project-section project-section--muted" id="evolucao">
+      <div class="project-section__inner">
+        <div class="project-section__head"><p class="project-label">Funcionamento e evolução</p><h2 class="project-heading">Aplicativo funcional, com espaço para evoluir</h2></div>
+        <div class="content-grid">
+          <article class="doc-panel"><h3>Funcionalidades disponíveis · uso local</h3><p>O aplicativo funciona localmente, com dados mantidos no dispositivo e integração aos documentos da clínica.</p><ul class="doc-list"><li>Sem login ou permissões por perfil.</li><li>Sem sincronização entre aparelhos.</li><li>Sem geração de PDF na versão atual.</li></ul></article>
+          <article class="doc-panel"><h3>Evolução planejada</h3><ul class="doc-list"><li>Base central em servidor, auditoria e atualização compartilhada dos registros.</li><li>Perfis de recepção, supervisão, estagiário e administrador.</li><li>XLSM e DOCX como documentos de importação e exportação da base central.</li><li>Conversão do DOCX atualizado para PDF, com validação do layout para impressão frente e verso.</li></ul></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="clinic-footer"><a href="/#clinica-psi">← Voltar aos projetos</a><span>Clínica Psi · Giovanny Costa</span><a href="/#contact">Conversar sobre um projeto ↗</a></footer>
+</body>
+</html>

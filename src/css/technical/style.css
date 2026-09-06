@@ -1,0 +1,13 @@
+/* Estilos do portfólio técnico; manter os ajustes responsivos por último. */
+@import url("/src/css/technical/root.css");
+@import url("/src/css/technical/loader.css");
+@import url("/src/css/technical/header.css");
+@import url("/src/css/technical/nav.css");
+@import url("/src/css/technical/hero.css");
+@import url("/src/css/technical/about.css");
+@import url("/src/css/technical/skills.css");
+@import url("/src/css/technical/projects.css");
+@import url("/src/css/technical/contact.css");
+@import url("/src/css/technical/footer.css");
+@import url("/src/css/technical/animations.css");
+@import url("/src/css/technical/responsive.css");

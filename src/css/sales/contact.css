@@ -1,0 +1,49 @@
+.contact-section {
+  background:#24372b;
+  color:var(--paper);
+  padding:74px 0 28px
+}
+.contact-section .eyebrow {
+  color:#c1d4af
+}
+.contact-section .status-dot {
+  background:var(--lime)
+}
+.contact-section h2 {
+  font-size:clamp(48px,6.5vw,82px);
+  letter-spacing:-3px
+}
+.contact-section h2 em {
+  color:var(--lime)
+}
+.contact-section h2>span {
+  float:right;
+  font-size:100px;
+  color:#a9c88a;
+  font-weight:400
+}
+.contact-bottom {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+  margin-top:32px
+}
+.contact-bottom p {
+  color:#c0cbbf;
+  font-size:13px
+}
+.lime {
+  background:var(--lime);
+  color:var(--ink);
+  padding-inline:30px
+}
+.contact-secondary {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid #4a5a4c;
+  margin-top:46px;
+  padding-top:24px;
+  font-size:11px;
+  color:#c0cbbf
+}

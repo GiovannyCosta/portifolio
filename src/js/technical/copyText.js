@@ -1,5 +1,5 @@
 const btnEmail = document.getElementById("copyEmail");
-let email = "gioreizom@gmail.com"; // Corrigi o .com se necessário
+let email = "gioreizon@gmail.com"; // Corrigi o .com se necessário
 
 btnEmail.addEventListener("click", (e) => {
   e.preventDefault(); // Impede de abrir o mailto: instantaneamente
@@ -11,5 +11,7 @@ btnEmail.addEventListener("click", (e) => {
     setTimeout(() => {
       btnEmail.classList.remove("copied");
     }, 2000);
+  }).catch(() => {
+    window.location.href = `mailto:${email}`;
   });
 });

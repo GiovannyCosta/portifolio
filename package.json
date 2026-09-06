@@ -1,0 +1,9 @@
+{
+  "name": "gioenv-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site de serviços e portfólio técnico de Giovanny Costa",
+  "scripts": {
+    "check": "node scripts/check.cjs"
+  }
+}

@@ -1,0 +1,25 @@
+.process-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px
+}
+.process-grid article {
+  border-top:1px solid #adb99d;
+  padding-top:25px
+}
+.process-grid article>span {
+  font-size:9px;
+  letter-spacing:1.5px;
+  color:#64754f
+}
+.process-grid h3 {
+  font-size:20px;
+  font-weight:500;
+  margin:19px 0 10px;
+  letter-spacing:-.5px
+}
+.process-grid p {
+  font-size:13px;
+  color:var(--muted);
+  margin:0
+}
