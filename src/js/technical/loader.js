@@ -10,14 +10,7 @@ if (savedVersion !== APP_VERSION) {
   localStorage.setItem("portfolio_version", APP_VERSION);
 }
 
-// 2. Forçar Cache Busting no CSS
-// Isso impede que o celular do usuário segure o CSS velho
-const styleLink = document.querySelector('link[href="/src/css/technical/style.css"]');
-if (styleLink) {
-  styleLink.href = `/src/css/technical/style.css?v=${APP_VERSION}`;
-}
-
-// 3. Injetar o HTML do Loader imediatamente
+// 2. Injetar o HTML do Loader imediatamente
 const loaderHTML = `
   <div id="loader">
     <div class="loader-inner">
